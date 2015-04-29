@@ -39,6 +39,7 @@ def match_ends(words):
 def front_x(words):
   # +++your code here+++
   x_list = []
+  other_list = []
   for w in words:
     if w.startswith('x'):
       x_list.append(w)
