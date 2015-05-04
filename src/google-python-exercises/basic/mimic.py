@@ -71,7 +71,7 @@ def print_mimic(mimic_dict, word):
       if not nexts:
           nexts = mimic_dict['']
       word = random.choice(nexts)
-  return
+
 
 
 # Provided main(), calls mimic_dict() and mimic()
