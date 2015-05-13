@@ -20,6 +20,11 @@ Here's what a puzzle url looks like:
 
 def url_sort_key(url):
   """ Used to order urls in decresing order """
+  match = re.search(r'-(\w+)-(\w+)\.\w+', url)
+  if match:
+    return match.group(2)
+  else:
+    return url
 
 
 def read_urls(filename):
