@@ -33,7 +33,13 @@ def read_urls(filename):
   Screens out duplicate urls and returns the urls sorted into
   increasing order."""
   # +++your code here+++
+  underbar = filename.index('_')
+  host = filename[underbar + 1:]
 
+  url_dict = {}
+  f = open(filename)
+  for line in f:
+    match = re.search(r'"Get (\S+)', line)
 
 def download_images(img_urls, dest_dir):
   """Given the urls already in the correct order, downloads
